@@ -66,6 +66,7 @@ class App extends Component {
     return (
 
         <div className="App">
+          {/* add Cockpit */}
           <Cockpit 
             showPersons={this.state.showPersons} 
             persons={this.state.persons}/>
