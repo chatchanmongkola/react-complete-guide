@@ -69,7 +69,7 @@ class App extends Component {
           <Cockpit 
             showPersons={this.state.showPersons} 
             persons={this.state.persons}/>
-          {persons}
+            {persons}
         </div>
 
     );
