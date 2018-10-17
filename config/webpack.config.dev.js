@@ -37,12 +37,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     require.resolve('style-loader'),
     {
       loader: require.resolve('css-loader'),
-      options: {
-        cssOptions,
-        importLoaders:1,
-        modules:true,
-        localIdentName: '[name]__[local]__[hash:base65:5]'
-      },
+      options: cssOptions,
     },
     {
       // Options for PostCSS as we reference these options twice
@@ -274,6 +269,8 @@ module.exports = {
             exclude: cssModuleRegex,
             use: getStyleLoaders({
               importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
             }),
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
