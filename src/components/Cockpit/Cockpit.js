@@ -4,10 +4,10 @@ const Cockpit = (props) => {
 
     const assignClasses = []
     let btnClass = ''
+
     if(props.showPersons){
         btnClass = classes.Red
     }
-
     if(props.persons.length <= 2){
         assignClasses.push(classes.red)
     }
@@ -16,10 +16,10 @@ const Cockpit = (props) => {
     }
 
     return (
-        <div>
-            <h1>Hi I'm React App</h1>
-          <p className={classes.join(' ')}>This is really working</p>
-          <button className={btnClass} onClick={this.togglePersonHandler}>Toggle Persons</button>
+        <div className={classes.Cockpit}>
+            <h1>{props.appTitle}</h1>
+            <p className={assignClasses.join(' ')}>This is really working</p>
+            <button className={btnClass} onClick={props.clicked}>Toggle Persons</button>
         </div>
     )
 }
